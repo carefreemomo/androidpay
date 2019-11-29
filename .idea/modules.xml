@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidPay.iml" filepath="$PROJECT_DIR$/AndroidPay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidpay.iml" filepath="$PROJECT_DIR$/androidpay.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
