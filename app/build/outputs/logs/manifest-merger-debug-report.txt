@@ -59,14 +59,14 @@ ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifes
 		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:23:17-37
 	android:name
 		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:22:17-57
-activity#cn.lixiaoqian.PayUtil.wxapi.WXPayEntryActivity
+activity#cn.lixiaoqian.SunlightRock.wxapi.WXPayEntryActivity
 ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:25:9-28:45
 	android:launchMode
 		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:28:13-43
 	android:exported
 		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:26:13-74
+		ADDED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml:26:13-79
 uses-sdk
 INJECTED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Projects\GitAndroidProjects\androidpay\app\src\main\AndroidManifest.xml

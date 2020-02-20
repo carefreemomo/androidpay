@@ -90,18 +90,18 @@ public class PayActivity extends UnityPlayerActivity {
 		};
 
 
-	public void  weichatPay(final Activity activity,final Context context,final String appId, String partnerId, String prepayId, String nonceStr, String timeStamp, String sign){
+	public void  weichatPay(final Activity activity,final Context context,final String appId, String partnerId, String prepayId,String packageValue, String nonceStr, String timeStamp, String sign){
 		Log.d("Unity","weichatPayStart1");//输出验签是否正确
 		msgApi = WXAPIFactory.createWXAPI(context, appId);
 		msgApi.registerApp(appId);
 		//建议动态监听微信启动广播进行注册到微信
-//		context.registerReceiver(new BroadcastReceiver() {
-//			@Override
-//			public void onReceive(Context context, Intent intent) {
-//				// 将该app注册到微信
-//				msgApi.registerApp(appId);
-//			}
-//		}, new IntentFilter(ConstantsAPI.ACTION_REFRESH_WXAPP));
+		context.registerReceiver(new BroadcastReceiver() {
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				// 将该app注册到微信
+				msgApi.registerApp(appId);
+			}
+		}, new IntentFilter(ConstantsAPI.ACTION_REFRESH_WXAPP));
 
 		if (msgApi.getWXAppSupportAPI() >= Build.PAY_SUPPORTED_SDK_INT) {
 			WX_appId=appId;
@@ -109,14 +109,20 @@ public class PayActivity extends UnityPlayerActivity {
 			request.appId = appId;
 			request.partnerId = partnerId;
 			request.prepayId = prepayId;
-			request.packageValue = "Sign=WXPay";
+			request.packageValue = packageValue;
 			request.nonceStr = nonceStr;
 			request.timeStamp = timeStamp;
 			request.sign = sign;
+			Log.d("Unity", appId);
+			Log.d("Unity", partnerId);
+			Log.d("Unity", prepayId);
+			Log.d("Unity", nonceStr);
+			Log.d("Unity", timeStamp);
+			Log.d("Unity", sign);//输出验签是否正确
 			Log.d("Unity", request.checkArgs() + "");//输出验签是否正确
 			msgApi.sendReq(request);
 		}
-		Log.d("Unity","weichatPayStart2");//输出验签是否正确
+		Log.d("Unity"," ");//输出验签是否正确
 //        Intent myIntent = new Intent(activity, WXPayEntryActivity.class);
 //        activity.startActivity(myIntent);
         Log.d("Unity","weichatPayStart3");//输出验签是否正确
