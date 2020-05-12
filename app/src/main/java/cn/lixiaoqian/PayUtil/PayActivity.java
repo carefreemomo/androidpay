@@ -71,6 +71,7 @@ public class PayActivity extends UnityPlayerActivity {
 						PayResult payResult = new PayResult((String) msg.obj);
 						String resultInfo = payResult.getResult();// 同步返回需要验证的信息
 						String resultStatus = payResult.getResultStatus();
+						Log.d("Unity","resultStatus:"+resultStatus);
 						// 判断resultStatus 为9000则代表支付成功
 						if (TextUtils.equals(resultStatus, "9000")) {
 							UnityPlayer.UnitySendMessage("PurchaseManager", "PayResultSuccess", resultInfo);
